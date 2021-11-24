@@ -20,8 +20,10 @@ const element = document.createElement('h1');
 // istruzione if per determinare se num-giocatore o num-computer è più alto 
 if (numberPlayer > numberComputer) {
     element.innerHTML += 'Giocatore vince avendo numero ' + numberPlayer + ' ' + 'e Computer numero ' + numberComputer;
-} else {
+} else if (numberPlayer < numberComputer) {
     element.innerHTML += 'Computer vince avendo numero ' + numberComputer + ' ' + 'e Giocatore numero ' + numberPlayer;
+} else {
+    element.innerHTML += 'Giocatore e Computer hanno gli stessi numeri ! Ritenta';
 }
 // appendo h1 in html 
 container.append(element)
